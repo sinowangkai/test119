@@ -3,7 +3,8 @@ import searchcontainer from './components/tabbar/searchcontainer.vue'
 import homecontainer from './components/tabbar/homecontainer.vue'
 import membercontainer from './components/tabbar/membercontainer.vue'
 import shopcarcontainer from './components/tabbar/shopcarcontainer.vue'
-import VueResource from 'vue-resource'
+import newList from './components/news/newList.vue'
+import newsinfo from './components/news/newsinfo.vue'
 // 3. 创建路由对象
 var router = new VueRouter({
   routes: [
@@ -12,6 +13,8 @@ var router = new VueRouter({
     {path:'/member',component:membercontainer},
     {path:'/shopcar',component:shopcarcontainer},
     {path:'/search',component:searchcontainer},
+    {path:'/home/newList',component:newList},
+    {path:'/home/newsinfo/:id',component:newsinfo},
   ],
   linkActiveClass:"mui-active"//change default class
 })
